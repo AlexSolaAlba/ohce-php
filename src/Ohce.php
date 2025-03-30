@@ -1,6 +1,6 @@
 <?php
 
-namespace Deg540\StringCalculatorPHP;
+namespace Deg540\Ohce;
 
 use function PHPUnit\Framework\equalTo;
 

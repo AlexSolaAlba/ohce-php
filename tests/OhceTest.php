@@ -1,9 +1,9 @@
 <?php
 
-namespace Deg540\StringCalculatorPHP\Test;
+namespace Deg540\Ohce\Test;
 
 use PHPUnit\Framework\TestCase;
-use Deg540\StringCalculatorPHP\Ohce;
+use Deg540\Ohce\Ohce;
 
 class OhceTest extends TestCase
 {   // TODO: String Calculator Kata Tests

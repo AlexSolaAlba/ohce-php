@@ -3,24 +3,24 @@
 main: build-image build-container
 
 build-image:
-	docker build -t calculator .
+	docker build -t ohce .
 
 build-container:
-	docker run -dt --name calculator -v .:/540/Calculator calculator
-	docker exec calculator composer install
+	docker run -dt --name ohce -v .:/540/Ohce ohce
+	docker exec ohce composer update
 
 start:
-	docker start calculator
+	docker start ohce
 
 test: start
-	docker exec calculator ./vendor/bin/phpunit tests/$(target)
+	docker exec ohce ./vendor/bin/phpunit tests/$(target)
 
 shell: start
-	docker exec -it calculator /bin/bash
+	docker exec -it ohce /bin/bash
 
 stop:
-	docker stop calculator
+	docker stop ohce
 
 clean: stop
-	docker rm calculator
+	docker rm ohce
 	rm -rf vendor
